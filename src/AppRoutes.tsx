@@ -1,4 +1,3 @@
-
 import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/layout";
 import HomePage from "./pages/HomePage";
@@ -8,9 +7,7 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 import SearchPage from "./pages/SearchPage";
 import DetailPage from "./pages/DetailPage";
-// import OrderStatusPage from "./pages/OrderStatusPage";
-
-
+import OrderStatusPage from "./pages/OrderStatusPage";
 
 const AppRoutes = () => {
   return (
@@ -19,7 +16,7 @@ const AppRoutes = () => {
         path="/"
         element={
           <Layout showHero>
-            <HomePage />{" "}
+            <HomePage />
           </Layout>
         }
       />
@@ -40,7 +37,7 @@ const AppRoutes = () => {
           </Layout>
         }
       />
-      {/* <Route element={<ProtectedRoute />}>
+      <Route element={<ProtectedRoute />}>
         <Route
           path="/order-status"
           element={
@@ -48,8 +45,7 @@ const AppRoutes = () => {
               <OrderStatusPage />
             </Layout>
           }
-        /> */}
-      <Route element={<ProtectedRoute />}>
+        />
         <Route
           path="/user-profile"
           element={
